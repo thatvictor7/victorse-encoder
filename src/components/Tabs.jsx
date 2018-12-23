@@ -5,6 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import Inputs from './EncodeInput'
 
 function TabContainer(props) {
     return (
@@ -35,19 +36,21 @@ class SimpleTabs extends React.Component {
     };
 
     render() {
-        const { classes } = this.props;
+        const { classes, handleText, convertInput } = this.props;
         const { value } = this.state;
 
         return (
             <div className={classes.root}>
-                <AppBar position="static" className="navbar">
+                <AppBar position="static" className="navbar center">
                     <Tabs value={value} onChange={this.handleChange}>
                         <Tab label="Encode" />
                         <Tab label="Decode" />
                     </Tabs>
                 </AppBar>
-                {value === 0 && <TabContainer>Encode</TabContainer>}
-                {value === 1 && <TabContainer>Decode</TabContainer>}
+                <div className="center">
+                    {value === 0 && <TabContainer><Inputs handleText={handleText} convertInput={convertInput} coderType="Encode"/></TabContainer>}
+                    {value === 1 && <TabContainer><Inputs handleText={handleText} coderType="Decode"/></TabContainer>}
+                </div>
             </div>
         );
     }

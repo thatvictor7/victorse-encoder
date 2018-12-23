@@ -6,3 +6,17 @@
 body {
   background-color: rgba(0, 94, 178, 0.208) !important;
 }
+
+.button {
+  background-color: rgb(0, 74, 140) !important;
+}
+
+.button:hover {
+  background-color: rgb(0, 114, 217) !important;
+}
+
+.center {
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+}
