@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar'
 import SimpleTabs from './components/Tabs'
+import CustomizedSnackbars from './components/SnackBar'
+import AlertDialogSlide from './components/SnackBar';
 // import Home from './components/Home'
 
 class App extends Component {
@@ -60,7 +62,8 @@ class App extends Component {
       }
     }
     // return code
-    console.log(code)
+    this.setState({ encoded: code })
+    // console.log(code)
   }
   
   handleText = (e) => {
@@ -76,6 +79,9 @@ class App extends Component {
         <SimpleTabs convertInput={this.convertInput}
                     handleText={this.handleText}/>
         {/* <Home /> */}
+        <div>
+          {this.state.encoded}
+        </div>
       </div>
     );
   }
