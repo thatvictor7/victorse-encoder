@@ -41,7 +41,6 @@ function Inputs(props) {
             />
             <Button variant="contained" color="primary" onClick={() => convertInput("ayye")} className="button">
                 Send
-        {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
                 <Icon className={classes.rightIcon}>send</Icon>
             </Button>
         </div>

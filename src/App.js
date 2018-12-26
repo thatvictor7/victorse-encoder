@@ -35,7 +35,6 @@ class App extends Component {
     str = str.toLowerCase()
     for(var i=0;i<str.length;i++) {
       if(str[i] === " ") {
-      // console.log(res)
         res += ' '
       }
       for(var x=0;x<keys.length;x++) {
@@ -66,13 +65,10 @@ class App extends Component {
         code += '-'
       }
     }
-    // return code
     this.setState({ encoded: code })
-    // console.log(code)
   }
 
   decode = (str) => {
-    // str = this.encoded
     str = this.state.value
     let newStr = ''
     let updated = ''
@@ -118,7 +114,6 @@ class App extends Component {
         }
         spacedRes += res[i]
     }
-    // console.log(spacedRes)
     this.setState({ decoded: spacedRes })
   }
   

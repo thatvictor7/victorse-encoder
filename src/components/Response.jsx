@@ -19,7 +19,7 @@ const Response = (props) => {
         <div className="response">
             <p>{textEncoded}</p>
             <p>{textDecoded}</p>
-            <Button variant="contained" onClick={resetButton} size="large" className="button2">Reset  <ThreeSixtyIcon className={classes.icon} /></Button>
+            {textEncoded && textDecoded ? <Button variant="contained" onClick={resetButton} size="large" className="button2">Reset  <ThreeSixtyIcon className={classes.icon} /></Button> : <p></p> }
         </div>
     )
 }
