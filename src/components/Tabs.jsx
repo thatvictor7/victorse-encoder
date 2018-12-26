@@ -36,7 +36,7 @@ class SimpleTabs extends React.Component {
     };
 
     render() {
-        const { classes, handleText, convertInput } = this.props;
+        const { classes, handleText, encodeInput, decodeInput } = this.props;
         const { value } = this.state;
 
         return (
@@ -48,8 +48,8 @@ class SimpleTabs extends React.Component {
                     </Tabs>
                 </AppBar>
                 <div className="center">
-                    {value === 0 && <TabContainer><Inputs handleText={handleText} convertInput={convertInput} coderType="Encode"/></TabContainer>}
-                    {value === 1 && <TabContainer><Inputs handleText={handleText} coderType="Decode"/></TabContainer>}
+                    {value === 0 && <TabContainer><Inputs handleText={handleText} convertInput={encodeInput} coderType="Encode"/></TabContainer>}
+                    {value === 1 && <TabContainer><Inputs handleText={handleText} convertInput={decodeInput} coderType="Decode"/></TabContainer>}
                 </div>
             </div>
         );
